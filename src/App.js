@@ -1,28 +1,50 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import "./App.css";
 
-class App extends Component {
-  render() {
+function App() {
+    const [isMobile, setIsMobile] = useState(null);
+
+    useEffect(() => {
+
+    }, [isMobile]);
+
+    updateWindowDimensions = () => {
+        let is 
+    }
+
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+        <div className="nav">
+            <div className="hamburger">
+                <label htmlFor="toggle">&#9776;</label>
+                <input type="checkbox" id="toggle" />
+            </div>
+
+            <div className="menu">
+                <ul>
+                    <li>
+                        <a href="google.com">Google</a>
+                    </li>
+                    <li>
+                        <a href="facebook.com">Facebook</a>
+                    </li>
+                    <li>
+                        <a href="medium.com">Medium</a>
+                    </li>
+                    <li className="dropdown__hover">
+                        <span>
+                            Dropdown
+                            <i className="arrow down" />
+                        </span>
+                        <div className="dropdown__menu">
+                            <a href="#">Dropdown 1</a>
+                            <a href="#">Dropdown 2</a>
+                            <a href="#">Dropdown 3</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
     );
-  }
 }
 
 export default App;
